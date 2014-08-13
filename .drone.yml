@@ -4,4 +4,4 @@ env:
 services:
     - postgres
 script:
-    -  psql -U postgres -h 127.0.0.1 -c "SELECT 1" postgres
+    -  psql -U postgres -h 127.0.0.1 -c "CREATE USER demo with password 'demo';" postgres

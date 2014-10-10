@@ -4,5 +4,5 @@ env:
 services:
     - onaio/postgis
 script:
-    - go build
-    - go test -v
+    - psql -c "CREATE USER wkcdd WITH PASSWORD 'wkcdd';" -h 127.0.0.1 -U postgres postgres
+    - psql -c "CREATE DATABASE wkcdd_test OWNER wkcdd;" -h 127.0.0.1 -U postgres postgres

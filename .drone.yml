@@ -1,6 +1,8 @@
 image: mischief/docker-golang
 env:
     - GOPATH=/var/cache/drone
+services:
+    - onaio/postgis
 script:
     - go build
     - go test -v

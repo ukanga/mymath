@@ -1,4 +1,4 @@
-image: mischief/docker-golang
+image: onaio/python:2.7
 env:
     - GOPATH=/var/cache/drone
 services:
